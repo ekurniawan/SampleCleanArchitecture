@@ -9,6 +9,7 @@ namespace SampleCleanArchitecture.Api
         {
             builder.Services.AddApplicationServices();
             builder.Services.AddPersistenceServices(builder.Configuration);
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddControllers();
             return builder.Build();
         }
