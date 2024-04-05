@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SampleCleanArchitecture.Application.Features.Categories.Queries.GetCategoriesWithEvents;
 using SampleCleanArchitecture.Application.Features.Categories.Queries.GetCategoryList;
+using SampleCleanArchitecture.Application.Features.Events.Commands.CreateEvent;
 using SampleCleanArchitecture.Application.Features.Events.Queries.GetEventsList;
 using SampleCleanArchitecture.Domain.Entities;
 
@@ -16,6 +17,8 @@ namespace SampleCleanArchitecture.Application.Profiles
 
             CreateMap<Category, CategoryEventListVm>();
             CreateMap<Event, CategoryEventDto>();
+
+            CreateMap<CreateEventCommand, Event>().ReverseMap();
         }
     }
 }

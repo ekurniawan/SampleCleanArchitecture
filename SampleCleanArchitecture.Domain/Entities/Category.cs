@@ -6,5 +6,7 @@ namespace SampleCleanArchitecture.Domain.Entities
     {
         public Guid CategoryId { get; set; }
         public string Name { get; set; } = null!;
+
+        public ICollection<Event>? Events { get; set; }
     }
 }
